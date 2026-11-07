@@ -1,0 +1,66 @@
+:root {
+  --bg: #f6f4ef; --card: #ffffff; --ink: #1f1d1a; --muted: #6b6660; --line: #e4dfd6;
+  --accent: #c2410c; --accent-ink: #ffffff;
+  --ok: #15803d; --okbg: #dcfce7; --warn: #b91c1c; --warnbg: #fee2e2;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171513; --card: #211e1b; --ink: #f3efe9; --muted: #a59e95; --line: #38332e;
+    --accent: #f97316; --accent-ink: #1a0f06;
+    --ok: #4ade80; --okbg: #14301f; --warn: #f87171; --warnbg: #3a1717;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main { max-width: 600px; margin: 0 auto; padding: 16px 16px 48px; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+h1 { font-size: 22px; margin: 4px 0 2px; }
+.sub { color: var(--muted); margin: 0 0 16px; font-size: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+.lbl { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+input[type=text], input[type=password], textarea {
+  width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--bg); color: var(--ink); font: inherit;
+}
+textarea { resize: vertical; min-height: 64px; }
+button, .btn {
+  font: inherit; border: 0; border-radius: 10px; padding: 12px 16px; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink); font-weight: 600; text-decoration: none;
+  display: inline-block; text-align: center;
+}
+button.sec, .btn.sec { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+button.small, .btn.small { padding: 6px 10px; font-size: 13px; }
+button:disabled { opacity: .5; cursor: default; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.grow { flex: 1; }
+.spread { justify-content: space-between; }
+.estado { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.estado.on { background: var(--okbg); color: var(--ok); }
+.estado.off { background: var(--warnbg); color: var(--warn); }
+.menu { display: grid; gap: 8px; }
+.op { display: flex; gap: 12px; align-items: flex-start; padding: 12px; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; }
+.op.sel { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.op input { margin-top: 4px; accent-color: var(--accent); }
+.op .n { font-weight: 600; display: block; }
+.op .d { color: var(--muted); font-size: 13px; display: block; }
+.op .p { margin-left: auto; font-weight: 600; white-space: nowrap; }
+.msg { padding: 10px 12px; border-radius: 10px; margin-bottom: 14px; font-size: 14px; }
+.msg.err { background: var(--warnbg); color: var(--warn); }
+.msg.ok { background: var(--okbg); color: var(--ok); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; }
+.num { text-align: right; white-space: nowrap; }
+.muted { color: var(--muted); }
+.big { font-size: 22px; font-weight: 700; }
+pre { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font: 14px/1.5 ui-monospace, Menlo, Consolas, monospace; margin: 0 0 10px; }
+ul.plain { list-style: none; padding: 0; margin: 8px 0 0; font-size: 14px; }
+ul.plain li { padding: 4px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 8px; }
+.link { background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; font-weight: 400; font-size: 13px; }
+.hidden { display: none !important; }

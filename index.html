@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pedido de bocadillos</title>
+  <meta name="description" content="Pide tu bocadillo del día.">
+  <meta name="theme-color" content="#c2410c">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Bocatas">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="top">
+      <div>
+        <h1 id="titulo">Pedido de bocadillos</h1>
+        <p class="sub" id="subtitulo"></p>
+      </div>
+      <button id="instalar" class="sec small hidden" type="button">Instalar app</button>
+    </header>
+    <div id="offline" class="msg err hidden">Sin conexión. Los datos se actualizarán cuando vuelva la red.</div>
+    <div id="msg"></div>
+    <div id="app"><div class="card muted">Cargando…</div></div>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
