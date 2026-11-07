@@ -67,7 +67,7 @@ function pantallaCodigo(clave, titulo, alEntrar) {
 }
 
 /* =================================================================
-   VISTA COMPAÑEROS
+   VISTA ADMIN
    ================================================================= */
 const U = { code: '', nombre: LS.get('nombre'), data: null };
 
